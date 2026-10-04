@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ralph Saad – Software &amp; Systems Engineer</title>
+<meta name="description" content="CV of Ralph Saad: C++, Python, system bring-up, testing, GMSL 1/2/3 and reverse engineering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#e9e4d8; --ink:#16161b; --muted:#5b5b63; --line:#c9c2b2; --red:#a3201b; --bg:#f4f1ea;
+    --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--display);-webkit-font-smoothing:antialiased}
+  a{color:var(--red);text-underline-offset:3px}
+  a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+  .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,72px);max-width:1180px;margin:0 auto;padding:clamp(20px,5vw,64px)}
+  /* portrait */
+  .portrait{position:sticky;top:24px;align-self:start}
+  .panel{container-type:inline-size;background:var(--paper);border:2px solid var(--ink);padding:5% 4%}
+  .face{margin:0;font:700 calc(100cqw / 53)/1.2 var(--mono);color:var(--ink);white-space:pre;overflow:hidden;user-select:none}
+  .caption{font:400 13px/1.4 var(--mono);color:var(--muted);margin:10px 0 0}
+  /* content */
+  h1{font-weight:800;font-size:clamp(44px,7vw,88px);line-height:.95;letter-spacing:-.03em;margin:0 0 14px}
+  .role{font-size:clamp(19px,2.2vw,24px);font-weight:700;margin:0 0 6px}
+  .lede{color:var(--muted);max-width:52ch;margin:0 0 8px}
+  nav{display:flex;gap:20px;flex-wrap:wrap;margin:22px 0 0;font:400 14px var(--mono)}
+  section{margin-top:56px;padding-top:20px;border-top:2px solid var(--ink)}
+  h2{font-size:28px;font-weight:800;letter-spacing:-.02em;margin:0 0 14px}
+  h3{font-size:19px;margin:22px 0 4px}
+  p{max-width:62ch;margin:0 0 12px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:10px 0 0;list-style:none}
+  .chips li{font:400 14px var(--mono);border:1.5px solid var(--ink);padding:3px 10px;border-radius:999px}
+  .chips.hot li{background:var(--ink);color:var(--bg)}
+  dl{margin:0}
+  dt{font-weight:700;margin-top:16px}
+  dd{margin:2px 0 0;color:var(--muted);max-width:60ch}
+  .interest{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:10px}
+  .interest div{border-left:4px solid var(--red);padding:2px 0 2px 12px}
+  .interest b{display:block}
+  .interest span{color:var(--muted);font-size:15px}
+  .contact a{display:inline-block;margin:0 18px 6px 0;font:700 16px var(--mono)}
+  footer{margin:64px 0 0;font:400 13px var(--mono);color:var(--muted)}
+  @media (max-width:860px){
+    .wrap{grid-template-columns:1fr}
+    .portrait{position:static;max-width:520px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <aside class="portrait">
+    <div class="panel"><pre class="face" role="img" aria-label="ASCII art portrait of Ralph Saad, smiling, with short dark hair, a moustache and a goatee">                                       *+
+                           +o#@@@@@@@@@@@@@@@#Xx&gt;&gt;
+                      *&gt;#@@@@@@%%%%%%%%%%%%%%@@@@@@@X&lt;
+                    @@@@@%%%%%@@@@@@@@@@@@@@@%%%%%%@@@@%o
+                 o@@%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%@@@@x
+               &gt;@@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%@@%
+              #@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%@@@
+             @@%@@@@@@@@@@%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@%%%@
+           x@%%@@@@@@%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%@@@@@%%@
+          x@%@@@@%%%@@@@@%%#Xxo&gt;&lt;&lt;&lt;&lt;&lt;=*~++*&lt;&lt;oooxxXXXX%@@@@%%@@@@%@&gt;
+          @%@@%%@@@@@#X&gt;**~-:^^``''''.''''`'''''''`````^~o%@@@@@@@%@o
+         @%@@@@@%#x=+-^^:`''...................  .......':=XX%@@@@@%@
+        %%@@@@#&lt;+-:`'''''''....  ..............     ....''~&lt;X@@@@@@%%#
+        @%@@@X*:``^``'''''''..... .  .............    .....-X%%@@@@@%@
+       %%@@@@o*:`^^``'''`'''''.............................`=%%%@@@@%%X
+       %%@@@%#*^`^^^``````''................   ....... .. ..^&gt;@@%@@@@%%
+      x@%@@%@o~^^^^``''''..      ..                    .......:X@%@@%@#
+       @%@%@o-::^`'''''....        ..         .'.`^:^'...  ... .*@%@@%%
+       %%%@&gt;^::^^:~****=*-`. .     .     '-=&lt;&gt;%%X&gt;&gt;&lt;--~~--^..... +@%@%@
+       #%@o::::&lt;#%@#XX##%%%#X&lt;~`''......`*&gt;o&lt;&lt;+:`''.   .'`--'.....X@%%%
+       %%@+^-+#o&gt;+-:^^^:+=&gt;oxo&gt;+:`.   .'`---+*++*~-^^''.  ........*%%%@&gt;
+       x@%:^^~~-:-=&gt;o=xXxX*=XXX#*`.   .`-+*&lt;&lt;= =##x&gt;:=*-'..     ..^@%@o'.-`
+     -~#@x`^^`^~+&gt;xo=:=**++=x&gt;&lt;o*`..  .`^':+*~`^-^`.''```.      ...x@&gt;.  **
+    o%+*%&lt;`^^``^:^::^^`^-~=&gt;*~==~`.  ..'`^:`::^^`''.....       ... *# '  ^o.
+    &lt;@~`&gt;=`^```''.''``^:--::^:-~~`. .......''.''''.....        ... ^@'.  'X'
+    =#-'*=`^```'''.''``````^`:~~:'   .... ......'.''...        .....~:`^  &gt;.
+     X::x=^:^````''...'``'''^~+:`. .. .''............. .       ....' '-&gt;` :
+     +:-x*^:^^```'....''``:--~:`. .     ``'``'.......          ......^o+ .'
+      -`+o-:::^^`'. .'``--:^`^:^'..         '^```'..         . ....`: .  '
+       -:^:-:--:^````^-~~^--+&lt;=*+^``'`'``^` ''.'`--`'.    ..   .....   ...
+       -~^`~:---:^``^::-^^^:+&gt;xxx&gt;*~^:^^^``......':-``'....  . .....    .
+         ^`:-:::^^^`^^:-+=*&lt;&gt;&gt;xxoo=~oxo**~~:`'.'...'^`'..  .  .......
+         ~`^-:::^`'''+&lt;o%##%#X&gt;&lt;+-`:*=ooooxox&lt;=&gt;==:`.'...     ...'..  .
+          -:~-::^^'. o%#%#o&gt;&gt;=*+-^``^::~-~-~+-**o@@%`  ..    ....
+             ~-:::`' ^^:~~=oxxoo&lt;&lt;=*==****~--:^`^~+x`   .. .....
+              +----`'..``^^:-~~:`````''''''... .''`'.  .... ....
+               +~--:`'.'^^^^^^^^:--:--^''..   ..... ....`.....'.
+                 ~:--^'``^````'':XxXx&lt;-'..   ..     ....'....'.
+                  +--:-^`````'```^~=-`'.....        ........'.
+                   *~-&gt;=:^^^'```..^~`''.       ...`'......''.
+                   ++-*@x&gt;=+~:^^'`+--:^' ....``-&gt;&gt;#^.'''''..
+                   :++-=@@%XX&gt;&lt;*++oX=*+::~:+&lt;*=%@@='''''..
+                    -+*~=X@@%%@#XXX@%XxxxxX#@%@#*^.''''....    `&lt;
+                   `:-~***&lt;X%%%@@@@@@@@@%@@#o+:`''''''..        %
+                   ^^^-~*******====*++~~--:^`'''''''.....     . &gt;-
+                   -`^::-~***+++~~---:::^```''`'''...           -%
+                  ^*'^^`^~~+++++--:^```''''..'.........         &lt;%
+                  +X'``^^^:~~++++~:^``''...''.......           :@^
+                  ~@-'`````^:~~*+~~:^''....''.......          ^@~
+                   Xo^'''``^:::---::^'''''.......           .-#-
+                    #*`'.'''^`^^^^^```'''......           .`*o`
+                     &gt;+`''..'.'```'`'.'.....            .`:=
+                      =-'......'''.'....              .`^~&gt;
+                       *^'...............           .'`:=&lt;
+                        ~`.. .  .....  .           .`^~&gt;</pre></div>
+    <p class="caption">rendered from a photo with make_ascii.py</p>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Ralph Saad</h1>
+      <p class="role">Engineer</p>
+      <p class="lede">I write C++ and Python, bring up hardware systems, test them until they break, and take apart binaries to see how they work.</p>
+      <nav aria-label="Page sections">
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About me</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <dl>
+        <dt>C++ and Python development</dt>
+        <dd>Day-to-day work in both languages: tooling, test frameworks, and low-level code close to the hardware.</dd>
+        <dt>System setup and integration</dt>
+        <dd>Building and configuring test and development systems, from the bench to the software stack running on it.</dd>
+        <dt>Testing and validation</dt>
+        <dd>Designing and running tests that find real problems, and tracking them down to a root cause.</dd>
+        <dt>GMSL 1, 2 and 3</dt>
+        <dd>Hands-on work with Maxim/Analog Devices Gigabit Multimedia Serial Link: serializers, deserializers and the camera links built on them.</dd>
+        <dt>Reverse engineering</dt>
+        <dd>Analysing binaries and protocols to understand behaviour that nobody documented.</dd>
+      </dl>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <h3>Languages</h3>
+      <ul class="chips hot"><li>C++</li><li>Python</li></ul>
+      <h3>Domains</h3>
+      <ul class="chips"><li>GMSL 1/2/3</li><li>System bring-up</li><li>Testing &amp; validation</li><li>Reverse engineering</li></ul>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <p>Outside of work I keep busy with a few things that have nothing to do with a debugger.</p>
+      <div class="interest">
+        <div><b>Anime</b><span>Always something on the watchlist.</span></div>
+        <div><b>Football</b><span>Watching it and talking about it.</span></div>
+        <div><b>Metal</b><span>Loud, fast and technical.</span></div>
+        <div><b>Classical</b><span>The opposite end of the volume dial.</span></div>
+        <div><b>Gym</b><span>Lifting, regularly.</span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Want to work together or just talk shop? Get in touch.</p>
+      <a href="https://github.com/ralphsaad">GitHub</a>
+      <a href="https://www.linkedin.com/in/ralph-saad-b0382919b">LinkedIn</a>
+      <a href="mailto:ralphsaad1997@gmail.com">Email</a>
+    </section>
+
+    <footer>&copy; <span id="y">2026</span> Ralph Saad</footer>
+  </main>
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
